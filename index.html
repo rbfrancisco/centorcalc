@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Critérios de Centor Modificados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora Faringoamigdalite Estreptocócica</h1>
+        <form id="centor-form">
+            <h2>Critérios de Centor Modificados</h2>
+            <p class="titles">Sintomas</p>
+            <div class="grupoSintomas">
+            <label class="checkboxType">
+                <input type="checkbox" id="fever" value="1"> Febre (>38°C)
+            </label>
+            <label class="checkboxType">
+                <input type="checkbox" id="cough" value="1"> Tosse
+            </label>
+            <label class="checkboxType">
+                <input type="checkbox" id="swollenNodes" value="1"> Linfonodomegalia cervical
+            </label>
+            <label class="checkboxType">
+                <input type="checkbox" id="tonsillarExudates" value="1"> Amígdalas aumentadas ou com secreção
+            </label>
+            </div>
+            <div class="grupoIdades">
+              <p class="titles">Idade</p>
+              <label><input type="radio" name="age" id="age1" value="1"> 3-14 anos</label>
+                <label><input type="radio" name="age" id="age2" value="1"> 15-44 anos</label>
+                 <label><input type="radio" name="age" id="age3" value="1"> >44 anos</label>
+              <br><br>
+            </div>
+            
+
+            <button type="button" onclick="calculatePreTestProbability()">Calcular probabilidade pré-teste</button>
+        </form>
+
+        <div id="pretest-result"></div>
+
+        <h2 id="streptestitle">Strep Test</h2>
+        <label for="testResult">Resultado do teste</label>
+        <select id="testResult">
+            <option value="positive">Positivo</option>
+            <option value="negative">Negativo</option>
+        </select><br><br>
+
+        <label for="sensitivity">Sensibilidade do teste (%)</label>
+        <input type="number" id="sensitivity" value="85"><br><br>
+
+        <label for="specificity">Especificidade do teste (%)</label>
+        <input type="number" id="specificity" value="95"><br><br>
+
+        <button type="button" onclick="calculatePostTestProbability()">Calcular probabilidade pós-teste</button>
+
+        <div id="posttest-result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
