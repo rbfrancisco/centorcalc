@@ -43,6 +43,7 @@ input, select {
 
 label {
   text-align: left;
+  white-space: nowrap;
 }
 
 .titles{
